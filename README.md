@@ -1,24 +1,43 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With
 
-Things you may want to cover:
+- HTML
+- CSS
+- Ruby on Rails
 
-* Ruby version
+`git clone https://github.com/zainsadaqat/blog-app.git`
 
-* System dependencies
+`cd blog-app`
 
-* Configuration
+`bundle install`
 
-* Database creation
+`rails db:migrate`
 
-* Database initialization
+`rails server`
 
-* How to run the test suite
+## Authors
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Zain Sadaqat**
 
-* Deployment instructions
+- GitHub: [GitHub](https://github.com/zainsadaqat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/zain-sadaqat/)
+- Twitter: [Twitter](https://www.twitter.com/in/zain_sadaqat/)
 
-* ...
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- We have used **SpaceX API** to get the information about Rockets and missions. I
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
