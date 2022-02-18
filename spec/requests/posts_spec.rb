@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe "Inside posts_controller:", :type => :request do
+RSpec.describe 'Inside posts_controller:', type: :request do
   describe 'GET /users/:id/posts' do
     before(:example) { get('/users/12/posts') }
 
@@ -12,7 +12,7 @@ RSpec.describe "Inside posts_controller:", :type => :request do
       expect(response).to render_template(:index)
     end
 
-    it "Body Content of Index.html.erb" do
+    it 'Body Content of Index.html.erb' do
       expect(response.body).to include('<h1>posts</h1>')
     end
   end
@@ -28,8 +28,8 @@ RSpec.describe "Inside posts_controller:", :type => :request do
       expect(response).to render_template(:show)
     end
 
-    it "Body Content of Show.html.erb" do
+    it 'Body Content of Show.html.erb' do
       expect(response.body).to include('<h1>posts</h1>')
-    end    
+    end
   end
 end
