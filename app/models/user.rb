@@ -7,4 +7,3 @@ class User < ApplicationRecord
     Post.order(id: :desc).take(3)
   end
 end
-
