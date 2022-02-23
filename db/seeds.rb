@@ -14,5 +14,5 @@ fourth_user = User.create(name: 'John', photo: 'https://unsplash.com/photos/F_-0
 first_post = Post.create(title: 'Hello1', text: 'This is my first post1', user_id: first_user.id)
 second_post = Post.create(title: 'Hello2', text: 'This is my first post2', user_id: second_user.id)
 
-Comment.create(post: first_post.id, user_id: first_user.id, text: 'Hi Tom!1')
-Comment.create(post: second_post.id, user_id: second_user.id, text: 'Hi Tom!2')
+Comment.create(post_id: first_post.id, user_id: first_user.id, text: 'Hi Tom!1')
+Comment.create(post_id: second_post.id, user_id: second_user.id, text: 'Hi Tom!2')
