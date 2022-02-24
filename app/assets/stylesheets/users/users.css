@@ -1,0 +1,84 @@
+.users {
+  margin-top: 40px;
+}
+
+.user_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_img {
+  height: 160px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.user_info {
+  padding: 30px;
+  margin: 20px;
+  margin-right: 0;
+  background: #f8f8f8;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 160px;
+}
+
+.user-name {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.users-posts-length {
+  text-align: right;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #333;
+}
+
+.bio {
+  padding: 30px;
+  margin: 10px 0 30px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  max-width: 100%;
+  min-height: 160px;
+}
+
+.post-card {
+  padding: 30px;
+  margin: 10px 0 30px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  max-width: 100%;
+  min-height: 160px;
+}
+
+.post-description {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #333;
+}
+
+.post-likes-comments {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.01em;
+  text-align: right;
+  color: #333;
+}

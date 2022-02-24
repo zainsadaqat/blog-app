@@ -1,9 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Posts Home Page</title>
-</head>
-<body>
-  <h1>posts</h1>
-</body>
-</html>
+<section class="posts">
+  <div class="user_card">
+    <div class="user-img-container">
+      <%= image_tag(@user.photo, alt: "zain", class: "user_img")%>
+    </div>
+    <div class="user_info">
+      <ul>
+        <li class="user-inner-info">
+          <h3 class="user-name"><%= @user.name %></h3>
+          <p class="users-posts-length">Posts: <%= @user.posts.length %></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ul>
+    <% @posts.each do |post| %> <%= link_to post_path(post) do %>
+    <li class="post-card">
+      <h3 class="user-name"><%= post.title %></h3>
+      <p class="post-description"><%= post.text %></p>
+      <p class="post-likes-comments">
+        <span>Likes: <%= post.likes.length %> </span>
+        <span> Comments: <%= post.comments.length %> </span>
+      </p>
+    </li>
+      <% end %> 
+    <% end %>
+  </ul>
+  <%= link_to "Back", users_path , class: "back_btn" %>
+</section>

@@ -1,9 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Posts Show Page</title>
-</head>
-<body>
-  <h1>posts</h1>
-</body>
-</html>
+<section class="posts">
+  <div class="post-card">
+    <h3><%= @post.title %></h3>
+    <p><%= @post.text %></p>
+    <div class="comment">
+      <p>Likes: <%= @post.likes.length %></p>
+      <p class="comment-text">Comments: <%= @post.comments.length %></p>
+    </div>
+    <ul class="comments">
+      <h4>Comments</h4>
+      <% @post.comments.each do |comment|%>
+      <li class="comment">
+        <h4><%= @user.name %></h4>
+        <p class="comment-text"><%= comment.text %> <% end %></p>
+      </li>
+    </ul>
+  </div>
+  <%= link_to "Back", :back , class: "back_btn" %>
+</section>
