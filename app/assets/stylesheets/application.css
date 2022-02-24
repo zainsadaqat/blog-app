@@ -20,6 +20,7 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
+  font-family: sans-serif;
 }
 
 img {
@@ -36,4 +37,14 @@ img {
 .container {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.back_btn {
+  padding: 1em 3em;
+  margin: 5em 0;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(98, 95, 255);
+  font-family: sans-serif;
+  color: #eee;
 }
