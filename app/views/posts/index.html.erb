@@ -14,8 +14,7 @@
   </div>
 
   <ul>
-    <% @posts.each do |post| %> 
-    <%= link_to post_path(post) do %> 
+    <% @posts.each do |post| %> <%= link_to post_path(post) do %>
     <li class="post-card">
       <h3 class="user-name"><%= post.title %></h3>
       <p class="post-description"><%= post.text %></p>
@@ -24,8 +23,8 @@
         <span> Comments: <%= post.comments.length %> </span>
       </p>
     </li>
-    <% end %> 
+      <% end %> 
     <% end %>
   </ul>
-  <%= link_to "Back", users_path %>
+  <%= link_to "Back", users_path , class: "back_btn" %>
 </section>
