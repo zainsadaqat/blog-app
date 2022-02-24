@@ -1,9 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Users Show Page</title>
-</head>
-<body>
-  <h1>users</h1>
-</body>
-</html>
+<section class="users">
+  <div class="user_card">
+    <div class="user-img-container">
+      <%= image_tag(@user.photo, alt: "zain", class: "user_img")%>
+    </div>
+    <div class="user_info">
+      <ul>
+        <li class="user-inner-info">
+          <h3 class="user-name"><%= @user.name %></h3>
+          <p class="users-posts-length">Posts: <%= @user.posts.length %></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bio">
+    <h3 class="user-name">Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+
+  <div class="">
+    <ul>
+      <% @user.posts.each_with_index do |post, index|%> 
+      <%= link_to posts_path do %>
+      <li class="post-card">
+        <h3 class="user-name">Post # <%= index+1 %></h3>
+        <p class="post-description"><%= post.text %></p>
+        <p class="post-likes-comments">
+          <span>Likes: <%= post.likes.length %> </span>
+          <span> Comments: <%= post.comments.length %> </span>
+        </p>
+      </li>
+      <% end %> <% end %>
+    </ul>
+  </div>
+  <div><%= link_to "Back", users_path %></div>
+</section>

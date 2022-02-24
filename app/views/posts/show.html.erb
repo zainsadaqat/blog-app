@@ -5,5 +5,19 @@
 </head>
 <body>
   <h1>posts</h1>
+  <p><%= @post.title %></p>
+  <p><%= @post.text %></p>
+  <p><%= @post.comments.length %></p>
+  <p><%= @post.likes.length %></p>
+  <br/>
+  <hr>
+  <ul>
+  <% @post.comments.each do |comment|%>
+    <%= @user.name %><li><%= comment.text %></li>
+  <% end %>
+  </ul>
+  <hr>
+
+  <%= link_to "Back", :back %>
 </body>
 </html>
