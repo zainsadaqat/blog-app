@@ -1,3 +1,27 @@
 .posts {
   margin-top: 40px;
 }
+
+.post-card {
+  padding: 30px;
+  margin: 20px;
+  margin-right: 0;
+  background: #f8f8f8;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 160px;
+}
+
+.comments {
+  margin: 3em 0 1em;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.comment-text {
+  margin-left: 10px;
+}
