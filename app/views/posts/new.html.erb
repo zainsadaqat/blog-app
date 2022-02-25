@@ -1,0 +1,23 @@
+<h2>New Post Form</h2>
+
+<%= form_with, model: post, url: new_post_path, method: :post, local: true do |f|%>
+<div>
+  <%= f.label :question %><br />
+  <%= f.text_field :question %>
+</div>
+
+<!-- <div>
+  <%= f.label :answer %><br />
+  <%= f.text_field :answer %>
+</div>
+
+<div>
+  <%= f.label :distractor_1 %><br />
+  <%= f.text_field :distractor_1 %>
+</div>
+
+<div>
+  <%= f.label :distractor_2 %><br />
+  <%= f.text_field :distractor_2 %>
+</div> -->
+<% end %>
