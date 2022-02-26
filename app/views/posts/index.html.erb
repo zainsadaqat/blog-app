@@ -19,7 +19,7 @@
   <%= link_to "Create a new Post", new_post_path %>
 
   <ul>
-    <% @user.posts.each do |post| %> 
+    <% @user_posts.each do |post| %> 
     <%= link_to "/users/#{post.user_id}/posts/#{post.id}" do %>
     <li class="post-card">
       <h3 class="user-name"><%= post.title %></h3>
