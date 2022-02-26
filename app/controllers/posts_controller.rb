@@ -27,4 +27,9 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:post_id])
     @like = Like.new
   end
+
+private
+def post_params
+params.require(:post).permit(:title, :text)
+end
 end

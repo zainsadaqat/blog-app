@@ -5,4 +5,9 @@ class LikesController < ApplicationController
     @like = Like.new(user: @user, post: @post)
     redirect_to posts_path if @like.save
   end
+
+  private
+  def like_params
+  params.require(:like)
+  end
 end
