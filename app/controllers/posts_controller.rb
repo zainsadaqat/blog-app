@@ -28,8 +28,9 @@ class PostsController < ApplicationController
     @like = Like.new
   end
 
-private
-def post_params
-params.require(:post).permit(:title, :text)
-end
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end

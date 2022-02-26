@@ -7,7 +7,8 @@ class LikesController < ApplicationController
   end
 
   private
+
   def like_params
-  params.require(:like)
+    params.require(:like)
   end
 end
