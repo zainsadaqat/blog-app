@@ -41,10 +41,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- We have used **SpaceX API** to get the information about Rockets and missions. I
-
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.

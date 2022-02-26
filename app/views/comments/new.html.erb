@@ -1,0 +1,8 @@
+<h2>Create a Comment</h2>
+<%= form_with(model: @comment, url: comments_path, method: :post, local: true) do |f| %>
+<div>
+  <%= f.label :text %><br />
+  <%= f.text_field :text %>
+</div>
+<div><%= f.submit "Create a new Comment" %></div>
+<% end %> <%= link_to "Back", comments_path %>
