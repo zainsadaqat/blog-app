@@ -3,17 +3,14 @@
     <h3><%= @post.title %></h3>
     <p><%= @post.text %></p>
     <div class="comment">
+      <%= form_with(model: @like, url: likes_path, method: :post, local: true) do |f| %> 
+      <%= f.submit "Like" %> 
+      <% end %>
       <p>Likes: <%= @post.likes.length %></p>
+      <%= link_to comments_path do %>
       <p class="comment-text">Comments: <%= @post.comments.length %></p>
+      <% end %>
     </div>
-    <ul class="comments">
-      <h4>Comments</h4>
-      <% @post.comments.each do |comment|%>
-      <li class="comment">
-        <h4><%= @user.name %></h4>
-        <p class="comment-text"><%= comment.text %> <% end %></p>
-      </li>
-    </ul>
   </div>
   <%= link_to "Back", :back , class: "back_btn" %>
 </section>

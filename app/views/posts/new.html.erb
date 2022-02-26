@@ -1,23 +1,16 @@
-<h2>New Post Form</h2>
-
-<%= form_with, model: post, url: new_post_path, method: :post, local: true do |f|%>
+<h2>Create a new Post</h2>
+<%= form_with(model: post, url: posts_path, method: :post, local: true) do |f| %>
 <div>
-  <%= f.label :question %><br />
-  <%= f.text_field :question %>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
 </div>
-
-<!-- <div>
-  <%= f.label :answer %><br />
-  <%= f.text_field :answer %>
-</div>
-
 <div>
-  <%= f.label :distractor_1 %><br />
-  <%= f.text_field :distractor_1 %>
+  <%= f.label :text %><br />
+  <%= f.text_field :text %>
 </div>
-
 <div>
-  <%= f.label :distractor_2 %><br />
-  <%= f.text_field :distractor_2 %>
-</div> -->
+  <%= f.submit "Create a new Post" %>
+</div>
 <% end %>
+
+<%= link_to "Back", posts_path%>
