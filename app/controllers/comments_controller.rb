@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def index
     @post = Post.find(params[:post_id])
     @user = User.find(params[:user_id])
@@ -19,10 +18,9 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to comments_path
     else
-      render 'new', locals: {comment: @comment}
+      render 'new', locals: { comment: @comment }
     end
   end
 
-  def show
-  end
+  def show; end
 end

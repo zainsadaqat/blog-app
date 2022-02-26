@@ -14,10 +14,10 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.new(user: @user, title: params[:post][:title], text: params[:post][:text])
     if @post.save
-      flash[:success] = "Post saved successfully"
+      flash[:success] = 'Post saved successfully'
       redirect_to posts_path
     else
-      flash.now[:error] = "Post was not saved ..."
+      flash.now[:error] = 'Post was not saved ...'
       render 'new', locals: { post: @post }
     end
   end
