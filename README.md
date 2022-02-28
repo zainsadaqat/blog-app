@@ -4,10 +4,8 @@ The Blog app is a classic example of a blog website. I created a fully functiona
 
 ## Built With
 
-- HTML
-- CSS
-- Ruby on Rails
-- rspec-rails
+- HTML, CSS
+- Ruby on Rails, RSpec Rails
 
 `git clone https://github.com/zainsadaqat/blog-app.git`
 
