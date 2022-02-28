@@ -17,9 +17,9 @@ The Blog app is a classic example of a blog website. I created a fully functiona
 
 `rails server`
 
-#### Run Tests
+#### Run Models Tests
 
-`rspec`
+`rspec spec/models/`
 
 ## Authors
 
