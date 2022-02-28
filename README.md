@@ -21,6 +21,10 @@ The Blog app is a classic example of a blog website. I created a fully functiona
 
 `rspec spec/models/`
 
+#### Run Controllers Tests
+
+`rspec spec/requests/`
+
 ## Authors
 
 👤 **Zain Sadaqat**
