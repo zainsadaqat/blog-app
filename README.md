@@ -5,7 +5,8 @@ Hey, My name is Zain and this is a Blog web application. I created a fully funct
 ## Built With
 
 - HTML, CSS
-- Ruby on Rails, RSpec Rails
+- Ruby on Rails
+- Gem: rspec-rails, devise, bullet
 
 `git clone https://github.com/zainsadaqat/blog-app.git`
 
