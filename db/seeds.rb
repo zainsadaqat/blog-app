@@ -1,7 +1,40 @@
-# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+
+first_user = User.create(name: 'Tom', photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80', bio: 'Teacher from Mexico.')
+second_user = User.create(name: 'Lilly', photo: 'https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60', bio: 'Teacher from Poland.')
+third_user = User.create(name: 'Zain', photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60', bio: 'Teacher from Pakistan.')
+fourth_user = User.create(name: 'John', photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60', bio: 'Teacher from Canada.')
+fifth_user = User.create(name: 'Alien', photo: 'https://images.unsplash.com/photo-1587397845856-e6cf49176c70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60', bio: 'Teacher from Australia.')
+sixth_user = User.create(name: 'Putin', photo: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60', bio: 'Teacher from Moscow.')
+
+first_post = Post.create(title: 'Hello1', text: 'This is my first post1', user_id: first_user.id)
+second_post = Post.create(title: 'Hello2', text: 'This is my first post2', user_id: first_user.id)
+third_post = Post.create(title: 'Hello3', text: 'This is my first post3', user_id: second_user.id)
+fourth_post = Post.create(title: 'Hello4', text: 'This is my first post4', user_id: second_user.id)
+fifth_post = Post.create(title: 'Hello5', text: 'This is my first post5', user_id: third_user.id)
+sixth_post = Post.create(title: 'Hello6', text: 'This is my first post6', user_id: third_user.id)
+seventh_post = Post.create(title: 'Hello7', text: 'This is my first post7', user_id: fourth_user.id)
+eighth_post = Post.create(title: 'Hello8', text: 'This is my first post8', user_id: fourth_user.id)
+ninth_post = Post.create(title: 'Hello9', text: 'This is my first post9', user_id: fifth_user.id)
+tenth_post = Post.create(title: 'Hello10', text: 'This is my first post10', user_id: fifth_user.id)
+eleventh_post = Post.create(title: 'Hello11', text: 'This is my first post11', user_id: fifth_user.id)
+twelve_post = Post.create(title: 'Hello12', text: 'This is my first post12', user_id: fifth_user.id)
+
+Comment.create(post_id: first_post.id, user_id: first_user.id, text: 'Hi Tom!1')
+Comment.create(post_id: first_post.id, user_id: first_user.id, text: 'Hi Tom!2')
+Comment.create(post_id: first_post.id, user_id: first_user.id, text: 'Hi Tom!3')
+Comment.create(post_id: second_post.id, user_id: second_user.id, text: 'Hi Tom!4')
+Comment.create(post_id: second_post.id, user_id: second_user.id, text: 'Hi Tom!5')
+Comment.create(post_id: second_post.id, user_id: second_user.id, text: 'Hi Tom!6')
+Comment.create(post_id: third_post.id, user_id: third_user.id, text: 'Hi Tom!7')
+Comment.create(post_id: third_post.id, user_id: third_user.id, text: 'Hi Tom!8')
+Comment.create(post_id: third_post.id, user_id: third_user.id, text: 'Hi Tom!9')
+Comment.create(post_id: fourth_post.id, user_id: fourth_user.id, text: 'Hi Tom!10')
+Comment.create(post_id: fourth_post.id, user_id: fifth_user.id, text: 'Hi Tom!12')
+Comment.create(post_id: fifth_post.id, user_id: sixth_user.id, text: 'Hi Tom!13')
+Comment.create(post_id: fifth_post.id, user_id: sixth_user.id, text: 'Hi Tom!14')
+Comment.create(post_id: sixth_post.id, user_id: fourth_user.id, text: 'Hi Tom!15')
+Comment.create(post_id: sixth_post.id, user_id: fourth_user.id, text: 'Hi Tom!16')
+Comment.create(post_id: sixth_post.id, user_id: fifth_user.id, text: 'Hi Tom!17')
+Comment.create(post_id: sixth_post.id, user_id: fifth_user.id, text: 'Hi Tom!18')
+Comment.create(post_id: seventh_post.id, user_id: fifth_user.id, text: 'Hi Tom!19')
