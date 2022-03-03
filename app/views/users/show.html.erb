@@ -1,5 +1,14 @@
-<!DOCTYPE>
-<html>
-<head></head>
-<body>Users/show</body>
-</html>
+<section>
+  <%= link_to posts_path do %>
+    <div class="user_card">
+      <%= image_tag(@user.photo, alt: "Image", class: "user_img")%>
+      <div class="user_info">
+        <p class="user-name"><%= @user.email %></p>
+        <p class=""><%= @user.name %></p>
+        <p class=""><%= @user.bio %></p>
+        <p><%= @user.posts_counter %></p>
+      </div>
+    </div>
+  <% end %>
+</section>
+<%= link_to "Back", root_path %>
