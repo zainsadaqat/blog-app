@@ -10,7 +10,6 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-
 gem 'devise'
 
 gem 'bullet'
