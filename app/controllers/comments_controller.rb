@@ -16,10 +16,10 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.new(user: @user, post: @post, text: params[:comment][:text])
     if @comment.save
-      flash[:success] = "Successfully, posted a comment"
+      flash[:success] = 'Successfully, posted a comment'
       redirect_to comments_path
     else
-      flash.now[:error] = "Failed to post a comment"
+      flash.now[:error] = 'Failed to post a comment'
       render 'new', locals: { comment: @comment }
     end
   end
