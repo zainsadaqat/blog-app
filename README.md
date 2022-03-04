@@ -16,11 +16,17 @@ git clone https://github.com/zainsadaqat/blog-app.git
 cd blog-app
 ```
 
-`bundle install`
+```
+bundle install
+```
 
-`rails db:migrate`
+```
+rails db:migrate
+```
 
-`rails server`
+```
+rails server
+```
 
 #### Run Models Tests
 
