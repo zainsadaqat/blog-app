@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root to: "users#index", as: 'users'
+  root to: "users#index", as: 'root'
+
+  devise_for :users do 
+    get '/users/sign_out' => 'devise/sessions#destroy' 
+  end
+
   get "/users/:user_id", to: "users#show", as: 'user'
 
   get "/users/:user_id/posts", to: "posts#index", as: 'posts'

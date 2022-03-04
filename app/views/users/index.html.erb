@@ -1,17 +1,15 @@
 <section class="users">
-  <% @users.each do |user| %> <%= link_to user_path(user) do %>
-  <div class="user_card">
-    <div class="user-img-container">
-      <%= image_tag(user.photo, alt: "zain", class: "user_img")%>
-    </div>
-    <div class="user_info">
-      <ul>
-        <li class="user-inner-info">
-          <h3 class="user-name"><%= user.name %></h3>
-          <p class="users-posts-length">Posts: <%= user.posts.length %></p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <% end %> <% end %>
+  <% @users.each do |user|%>
+    <%= link_to user_path(user) do %>
+      <div class="user_card">
+        <%= image_tag(user.photo, alt: "Image", class: "user_img")%>
+        <div class="user_info">
+          <p class="user-name"><%= user.email %></p>
+          <p class=""><%= user.name %></p>
+          <p class=""><%= user.bio %></p>
+          <p><%= user.posts_counter %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </section>

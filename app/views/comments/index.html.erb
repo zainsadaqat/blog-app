@@ -1,12 +1,8 @@
 <section>
-  <%= link_to "Post a comment", new_comment_path %>
-  <ul class="comments">
-    <h4>Comments</h4>
-    <% @post.comments.each do |comment|%>
-    <li class="comment">
-      <h4><%= @user.name %></h4>
-      <p class="comment-text"><%= comment.text %> <% end %></p>
-    </li>
-  </ul>
-  <%= link_to "Back", posts_path , class: "back_btn" %>
+  <h2>Comments</h2>
+  <% @post.comments.each do |comment| %>
+    <p><%= comment.text %></p>
+  <% end %>
+  <%= link_to "Post comment", new_comment_path %>
+  <%= link_to "Back", posts_path %>
 </section>

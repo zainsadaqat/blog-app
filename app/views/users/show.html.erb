@@ -1,39 +1,14 @@
-<section class="users">
-  <div class="user_card">
-    <div class="user-img-container">
-      <%= image_tag(@user.photo, alt: "zain", class: "user_img")%>
+<section>
+  <%= link_to posts_path do %>
+    <div class="user_card">
+      <%= image_tag(@user.photo, alt: "Image", class: "user_img")%>
+      <div class="user_info">
+        <p class="user-name"><%= @user.email %></p>
+        <p class=""><%= @user.name %></p>
+        <p class=""><%= @user.bio %></p>
+        <p><%= @user.posts_counter %></p>
+      </div>
     </div>
-    <div class="user_info">
-      <ul>
-        <li class="user-inner-info">
-          <h3 class="user-name"><%= @user.name %></h3>
-          <p class="users-posts-length">Posts: <%= @user.posts.length %></p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <%= link_to "Create a new Post", new_post_path %>
-  <div class="bio">
-    <h3 class="user-name">Bio</h3>
-    <p><%= @user.bio %></p>
-  </div>
-
-  <div class="">
-    <ul>
-      <% @user.posts.each_with_index do |post, index|%> 
-      <%= link_to posts_path do %>
-      <li class="post-card">
-        <h3 class="user-name">Post # <%= index+1 %></h3>
-        <p class="post-description"><%= post.text %></p>
-        <p class="post-likes-comments">
-          <span>Likes: <%= post.likes.length %> </span>
-          <span> Comments: <%= post.comments.length %> </span>
-        </p>
-      </li>
-      <% end %> 
-      <% end %>
-    </ul>
-  </div>
-  <div><%= link_to "Back", users_path , class: "back_btn" %></div>
+  <% end %>
 </section>
+<%= link_to "Back", root_path %>

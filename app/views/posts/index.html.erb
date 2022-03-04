@@ -1,35 +1,12 @@
-<section class="posts">
-  <% flash.each do |type, msg| %>
-  <p><%= msg %></p>
+<section>
+  <% @posts.each do |post| %>
+    <%= link_to post_path(@user, post) do %>
+      <div>
+        <h2><%= post.title %></h2>
+        <p><%= post.text %></p>
+      </div>
+    <% end %>
   <% end %>
-  <div class="user_card">
-    <div class="user-img-container">
-      <%= image_tag(@user.photo, alt: "zain", class: "user_img")%>
-    </div>
-    <div class="user_info">
-      <ul>
-        <li class="user-inner-info">
-          <h3 class="user-name"><%= @user.name %></h3>
-          <p class="users-posts-length">Posts: <%= @user.posts.length %></p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <%= link_to "Create a new Post", new_post_path %>
-
-  <ul>
-    <% @user_posts.each do |post| %> 
-    <%= link_to "/users/#{post.user_id}/posts/#{post.id}" do %>
-    <li class="post-card">
-      <h3 class="user-name"><%= post.title %></h3>
-      <p class="post-description"><%= post.text %></p>
-      <p class="post-likes-comments">
-        <span>Likes: <%= post.likes.length %> </span>
-        <span> Comments: <%= post.comments.length %> </span>
-      </p>
-    </li>
-    <% end %> <% end %>
-  </ul>
-  <%= link_to "Back", users_path , class: "back_btn" %>
+  <%= link_to "Create a new post", new_post_path %>
+  <%= link_to "Back", root_path %>
 </section>
