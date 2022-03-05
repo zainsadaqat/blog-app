@@ -12,6 +12,11 @@ class CommentsController < ApplicationController
   end
 
   def create
+    unless user_signed_in?
+      flash[:notice] = 'You need to log in first!'
+      redirect_to posts_path
+      return
+    end
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
     @comment = Comment.new(user: @user, post: @post, text: params[:comment][:text])
@@ -22,5 +27,12 @@ class CommentsController < ApplicationController
       flash.now[:error] = 'Failed to post a comment'
       render 'new', locals: { comment: @comment }
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:comment_id])
+    @comment.destroy
+    flash[:success] = 'Successfully deleted a comment'
+    redirect_to posts_path
   end
 end

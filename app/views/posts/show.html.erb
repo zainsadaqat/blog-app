@@ -2,6 +2,9 @@
   <div>
     <h2><%= @post.title %></h2>
     <p><%= @post.text %></p>
+    <%if current_user.present? && current_user.id = @user.id %>
+      <%= button_to "Delete", post_delete_path(@post), method: :delete, class: "btn btn-danger" %>
+    <% end %>
     <%= form_with(model: @like, url: likes_path, method: :post) do |f| %>
       <%= f.submit "Like", class: "btn btn-primary" %>
     <% end %>
