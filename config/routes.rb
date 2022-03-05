@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/users/:user_id/posts/new", to: "posts#new", as: 'new_post'
   post "/users/:user_id/posts", to: "posts#create"
   get "/users/:user_id/posts/:post_id", to: "posts#show", as: 'post'
+  delete "/users/:user_id/posts/:post_id", to: "posts#destroy", as: 'post_delete'
   
   get "/users/:user_id/posts/:post_id/comments", to: "comments#index", as: 'comments'
   get "/users/:user_id/posts/:post_id/comments/new", to: "comments#new", as: 'new_comment'
