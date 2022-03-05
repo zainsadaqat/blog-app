@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:comment_id])
     @comment.destroy
-    flash[:success] = "Successfully deleted a comment"
+    flash[:success] = 'Successfully deleted a comment'
     redirect_to posts_path
   end
 end

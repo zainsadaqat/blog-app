@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
     @post.destroy
-    flash[:success] = "Successfully deleted a post"
+    flash[:success] = 'Successfully deleted a post'
     redirect_to posts_path
   end
 end
