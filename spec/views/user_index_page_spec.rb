@@ -8,12 +8,12 @@ describe 'User index page', type: :feature do
                       email: 'zain1@gmail.com', password: '121212')
     @user1.save
     @user2 = User.new(name: 'Zain2', bio: 'Microverse Student2',
-                     photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                     email: 'zain2@gmail.com', password: '121212')
+                      photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+                      email: 'zain2@gmail.com', password: '121212')
     @user2.save
     @user3 = User.new(name: 'Zain3', bio: 'Microverse Student3',
-                     photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                     email: 'zain3@gmail.com', password: '121212')
+                      photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+                      email: 'zain3@gmail.com', password: '121212')
     @user3.save
   end
 

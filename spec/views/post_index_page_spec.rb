@@ -1,7 +1,6 @@
 require 'rails_helper'
 require 'capybara/rspec'
 
-
 describe 'posts#index', type: :feature do
   before :each do
     @user = User.create(name: 'Zain', bio: 'Microverse Student',

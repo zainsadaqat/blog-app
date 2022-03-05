@@ -4,12 +4,12 @@ require 'capybara/rspec'
 describe 'Post show page', type: :feature do
   before :each do
     @user1 = User.create(name: 'Zain1', bio: 'Microverse Student1',
-                        photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                        email: 'zain1@gmail.com', password: '121212')
+                         photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+                         email: 'zain1@gmail.com', password: '121212')
 
     @user2 = User.create(name: 'Zain2', bio: 'Microverse Student2',
-                        photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-                        email: 'zain2@gmail.com', password: '121212')
+                         photo: 'https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+                         email: 'zain2@gmail.com', password: '121212')
 
     @post = Post.create(user_id: @user.id, title: 'First Post', text: 'Lorem Ipsum is a paragraph')
 
