@@ -19,4 +19,8 @@ Rails.application.routes.draw do
   delete "/users/:user_id/posts/:post_id/comments/:comment_id", to: "comments#destroy", as: 'post_comment_delete'
 
   post "/users/:user_id/posts/:post_id/likes", to: "likes#create", as: 'likes'
+
+  get '/api/posts', to: 'api_requests#all_posts'
+  get '/api/posts/:post_id/comments', to: 'api_requests#post_comments'
+  post '/api/posts/comment', to: 'api_requests#new_comments'
 end
