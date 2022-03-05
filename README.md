@@ -9,7 +9,7 @@ Hey, My name is Zain and this is a Blog web application. I created a fully funct
 - Gems: `rspec-rails`, `devise`, `bullet`, `cancancan`
 
 ```
-git clone https://github.com/zainsadaqat/blog-app.git
+git clone https://github.com/zainsadaqat/my-blog-app.git
 ```
 
 ```
